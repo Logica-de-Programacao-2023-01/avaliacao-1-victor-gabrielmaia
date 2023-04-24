@@ -12,6 +12,7 @@ func CalculateTowers(barLengths []int) (int, int) {
 	for i := 0; i < len(barLengths)-1; i++ {
 		if barLengths[i] == barLengths[i+1] {
 			altura += 1
+			continue
 		}
 		if barLengths[i] != barLengths[i+1] {
 			torre += 1
