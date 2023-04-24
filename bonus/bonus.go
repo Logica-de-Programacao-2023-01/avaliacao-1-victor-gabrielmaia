@@ -8,15 +8,15 @@ package bonus
 
 func CalculateTowers(barLengths []int) (int, int) {
 	torre := 1
-	var altura int
-	for i:= 0; i < len(barLengths) - 1;i++{
-		if barLengths[i] == barLengths[i+1]{
+	altura := 1
+	for i := 0; i < len(barLengths)-1; i++ {
+		if barLengths[i] == barLengths[i+1] {
 			altura += 1
 		}
-		if barLengths[i] != barLengths[i+1]{
+		if barLengths[i] != barLengths[i+1] {
 			torre += 1
 		}
 	}
 	return altura, torre
-	
+
 }
