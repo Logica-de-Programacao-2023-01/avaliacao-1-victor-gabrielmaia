@@ -22,13 +22,13 @@ func ClassifyPrices(prices []int) (int, error) {
 	var crescente bool
 	var decrescente bool
 
-	for i := 0; i < len(prices); i++ {
+	for i := 0; i < len(prices) - 1; i++ {
 		if prices[i+1] < prices[i] {
 			crescente = false
 			break
 		}
 	}
-	for i := 0; i < len(prices); i++ {
+	for i := 0; i < len(prices) - 1; i++ {
 		if prices[i+1] > prices[i] {
 			decrescente = false
 			break
