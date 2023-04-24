@@ -19,16 +19,16 @@ func ClassifyPrices(prices []int) (int, error) {
 		return 3, nil
 	}
 
-	var crescente bool
-	var decrescente bool
+	crescente := true
+	decrescente := true
 
-	for i := 0; i < len(prices) - 1; i++ {
+	for i := 0; i < len(prices)-1; i++ {
 		if prices[i+1] < prices[i] {
 			crescente = false
 			break
 		}
 	}
-	for i := 0; i < len(prices) - 1; i++ {
+	for i := 0; i < len(prices)-1; i++ {
 		if prices[i+1] > prices[i] {
 			decrescente = false
 			break
@@ -37,8 +37,7 @@ func ClassifyPrices(prices []int) (int, error) {
 
 	if decrescente == false && crescente == false {
 		return 3, nil
-	}
-	if crescente == true {
+	}else if crescente == true {
 		return 1, nil
 	} else {
 		return 2, nil
