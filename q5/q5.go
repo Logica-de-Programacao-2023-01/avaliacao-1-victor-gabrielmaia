@@ -21,11 +21,12 @@ func ProcessString(s string) string {
 	consoantes := []string{"q", "w", "r", "t", "y", "p", "s", "d", "f", "g", "h", "j", "k", "l", "ç", "z", "x", "c", "v", "b", "n", "m"}
 	consoantesPonto := []string{".q", ".w", ".r", ".t", ".y", ".p", ".s", ".d", ".f", ".g", ".h", ".j", ".k", ".l", ".ç", ".z", ".x", ".c", ".v", ".b", ".n", ".m"}
 	var newString string
+	
+	newString = strings.ToLower(s)
+	
 	for i := 0; i < len(vogais); i++ {
-		strings.ReplaceAll(s, string(vogais[i]), "")
+		newString = strings.ReplaceAll(s, string(vogais[i]), "")
 	}
-	strings.ToLower(s)
-	newString = s
 	for i := 0; i < len(consoantes); i++ {
 		newString = strings.ReplaceAll(s, string(consoantes[i]), string(consoantesPonto[i]))
 	}
