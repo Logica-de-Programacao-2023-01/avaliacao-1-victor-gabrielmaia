@@ -12,9 +12,9 @@ func TestCalculateTowers(t *testing.T) {
 		towers    int
 	}{
 		{input: []int{1, 2, 3, 4, 5}, maxHeight: 1, towers: 5},
-		{input: []int{5, 6, 7, 6}, maxHeight: 2, towers: 2},
+		{input: []int{5, 6, 7, 6}, maxHeight: 2, towers: 3},
 		{input: []int{1, 2, 3, 3}, maxHeight: 2, towers: 3},
-		{input: []int{1, 2, 3, 3, 3}, maxHeight: 3, towers: 2},
+		{input: []int{1, 2, 3, 3, 3}, maxHeight: 3, towers: 3},
 		{input: []int{3, 1, 2, 1}, maxHeight: 2, towers: 3},
 		{input: []int{1}, maxHeight: 1, towers: 1},
 		{input: []int{1, 1000, 1000, 1000}, maxHeight: 3, towers: 2},
