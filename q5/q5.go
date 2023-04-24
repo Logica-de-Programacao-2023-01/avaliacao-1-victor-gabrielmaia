@@ -23,12 +23,12 @@ func ProcessString(s string) string {
 	var newString string
 	
 	newString = strings.ToLower(s)
-	
+
 	for i := 0; i < len(vogais); i++ {
-		newString = strings.ReplaceAll(s, string(vogais[i]), "")
+		newString = strings.ReplaceAll(newString, string(vogais[i]), "")
 	}
 	for i := 0; i < len(consoantes); i++ {
-		newString = strings.ReplaceAll(s, string(consoantes[i]), string(consoantesPonto[i]))
+		newString = strings.ReplaceAll(newString, string(consoantes[i]), string(consoantesPonto[i]))
 	}
 
 	return newString
